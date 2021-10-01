@@ -13,9 +13,12 @@ class body_link(object):
     def __repr__(self):
         return '{}({},{})'.format(self.__class__.__name__, self.body, self.link)
 
+class CollisionMatrix(object):
+    def __init__(self):
+        pass
+
 class CollisionChecker(object):
-    def __init__(self, scn):
-        self.scn = scn
+    def __init__(self):
         self.distance_threshold = 1e-3
 
         self.__get_collision_objects()

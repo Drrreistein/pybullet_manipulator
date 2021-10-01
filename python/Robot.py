@@ -2,6 +2,7 @@ import pybullet
 from collections import namedtuple
 import numpy as np
 from IPython import embed
+
 class Robot(object):
     class link():
         def __init__(self, ind, name, pose):
@@ -24,6 +25,7 @@ class Robot(object):
         self.__get_joint_info()
         
         self.end_effector_link = self.get_ee_link().link_index
+        self.end_to_tool = ((0,0,0),(0,0,0,1))
 
     def get_base_name(self):
         return self.base_name
@@ -90,4 +92,10 @@ class Robot(object):
         return [pybullet.getJointState(self.robot, i)[0] for i in self.movable_joints]
 
     def get_link_pose(self, link):
+        pass
+
+    def set_end_to_tool(self, pose):
+        pass
+
+    def get_end_to_tool(self):
         pass

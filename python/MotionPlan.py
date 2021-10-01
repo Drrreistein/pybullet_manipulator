@@ -13,8 +13,7 @@ class OMPLPlanner(Planner):
     pass
 
 class SimplePlanner(Planner):
-    def __init__(self, scn, robot):
-        self.scn = scn
+    def __init__(self, robot):
         self.robot = robot
         self.configured = False
         self.collision_checker = CollisionChecker()

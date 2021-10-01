@@ -2,6 +2,8 @@ import numpy as np
 import pybullet
 import sys, os
 
+
+
 class HideOutput(object):
     '''
     A context manager that block stdout for its scope, usage:
@@ -38,7 +40,6 @@ class HideOutput(object):
         sys.stdout.flush()
         os.dup2(self._oldstdout_fno, 1)
         os.close(self._oldstdout_fno)  # Added
-
 
 class SO3():
     def __init__(self):
